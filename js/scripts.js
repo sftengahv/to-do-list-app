@@ -1,7 +1,7 @@
 $(document).ready(function() {
  
   $('#button').on('click', function() {
-    const toAdd = $('#taskInput').val().trim();
+    const toAdd = $('#input').val().trim();
 
     if (toAdd !== '') {
       $('ol').append('<li>' + toAdd + ' <button class="delete">X</button></li>');
@@ -30,4 +30,5 @@ $(document).ready(function() {
   $('ol').on('mouseleave', 'li', function() {
     $(this).find('.delete').hide();
   });
+  $('ol').sortable();
 });
